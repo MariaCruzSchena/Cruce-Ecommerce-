@@ -1,0 +1,21 @@
+$color-1: rgb(0, 0, 0);
+$color-2: #7d5a94;
+$color-3: #b7dd8b;
+$color-4: #ec2227;
+$color-5: rgba(255, 128, 0, 0.85);
+$color-6: #ffc400;
+$color-7: #8c8c8c;
+$color-8: #ffffff;
+
+$big-medium-screen: 1744px;
+$medium-screen: 1170px;
+$medium-small-screen: 900px;
+$small-screen: 600px;
+$smallest-screen: 400px;
+//$small-screen: 300px;
+
+@font-face {
+  font-family: NeueMachina;
+  src: url(../../assets/styles/NeueMachina-Ultrabold.otf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");

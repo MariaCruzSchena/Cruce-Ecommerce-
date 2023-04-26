@@ -1,0 +1,66 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.popupWrapper {
+  @include flex(row, space-between, center);
+  background-color: $color-2;
+  height: 30px;
+  padding: 10px;
+
+  @include devices(desktop) {
+    padding: 10px 20px;
+  }
+}
+
+.popupInnerWrapper {
+  width: 93%;
+}
+
+.popupMsgMobile {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: map-get($font-size, "x-s");
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  white-space: nowrap;
+  color: $color-8;
+
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.popupMsgDesktop {
+  display: none;
+
+  @include devices(desktop) {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: map-get($font-size, "x-s");
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $color-8;
+  }
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  background-color: $color-2;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 10px;
+  height: 10px;
+}
