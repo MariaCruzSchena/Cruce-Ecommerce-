@@ -1,0 +1,99 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.sidebarMainContainer {
+  @include flex(row, center, center);
+  margin-top: 1rem;
+}
+
+.sidebarContainer {
+  display: none;
+  @include devices(desktop) {
+    display: flex;
+    @include flex(row, center, center);
+    height: 50px;
+  }
+}
+
+.divider {
+  border: 0.1rem solid $color-9;
+  width: 2.5rem;
+  transform: rotate(-60deg);
+}
+
+//Details
+.detailCardContainer {
+  @include flex(row, center, center);
+}
+
+.detailCardWrapper {
+  @include flex(column, center, flex-start);
+  margin: 0 1rem 0 0.5rem;
+}
+
+img {
+  width: 30px;
+  height: 21px;
+}
+
+.detailCardTitle {
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.1rem;
+}
+
+.detailCardSubtitle, .detailCardSubtitleDiff {
+  font-family: Inter;
+  font-size: map-get($font-size, "x-s");
+  font-weight: 700;
+  letter-spacing: 0.05em;    
+}
+
+.detailCardSubtitle{
+  color: $color-4;
+}
+
+.detailCardSubtitleDiff{
+  color: $color-7;
+}
+
+//Searchbar
+.searchbarContainer {
+  @include flex(row, flex-start, center);
+  border: 1px solid $color-9;
+  border-radius: 3px;
+  width: 90%;
+  padding: 9px;
+
+  @include devices(tablet) {
+    width: 90%;
+  }
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.searchbarInput {
+  flex: 1;
+  border: none;
+  padding: 4px;
+  &::placeholder {
+    font-family: Inter;
+    font-size: map-get($font-size, "s");
+    font-weight: 400;
+    color: $color-7;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.searchbarIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}

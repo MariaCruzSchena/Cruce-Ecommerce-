@@ -1,6 +1,6 @@
-@import "../../assets/styles/maps";
-@import "../../assets/styles/mixins";
-@import "../../assets/styles/variables";
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
 
 * {
   padding: 0;
@@ -60,7 +60,7 @@ button {
   cursor: pointer;
 }
 
-img {
+button img {
   width: 10px;
   height: 10px;
 }
