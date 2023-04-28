@@ -1,0 +1,158 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+* {
+  box-sizing: border-box;
+}
+.divMain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+
+  @include devices(desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    grid-column-gap: 70px;
+    grid-row-gap: 0px;
+    margin: 2rem 0 0 3rem;
+  }
+}
+
+.div1 {
+  grid-area: 2 / 1 / 4 / 2;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    grid-area: 1 / 1 / 9 / 2;
+  }
+}
+.div2 {
+  grid-area: 3 / 2 / 6 / 3;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    grid-area: 3 / 2 / 11 / 3;
+  }
+}
+.div3 {
+  grid-area: 4 / 1 / 8/ 2;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    grid-area: 10 / 1 / 18 / 2;
+  }
+}
+.div4 {
+  grid-area: 5 / 2 / 10 / 3;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    grid-area: 13 / 2 / 21 / 3;
+  }
+}
+.div5 {
+  display: none;
+  @include devices(desktop) {
+    display: block;
+    grid-area: 10 / 3 / 18 / 4;
+  }
+}
+.div6 {
+  display: none;
+  @include devices(desktop) {
+    display: block;
+    grid-area: 12 / 4 / 20 / 5;
+  }
+}
+.div7 {
+  grid-area: 1 / 1 / 2 / 3;
+  @include flex(column, space-evenly, center);
+
+  @include devices(desktop) {
+    grid-area: 2 / 3 / 8 / 5;
+    @include flex(column, space-evenly, flex-start);
+    margin-left: 2rem;
+  }
+}
+
+.div8 {
+  grid-area: 10 / 1 / 11 / 3;
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.div7Title {
+  overflow-wrap: break-word;
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "x-l");
+  font-weight: 800;
+  line-height: 30px;
+  margin-top: 2rem;
+  text-align: center;
+  @include devices(desktop) {
+    width: 90%;
+    font-size: map-get($font-size, "xxx-l");
+    font-weight: 800;
+    line-height: 54px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.div7Subtitle {
+  font-family: Inter;
+  font-size: map-get($font-size, "m");
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  margin-top: 2rem;
+  text-align: center;
+  @include devices(desktop) {
+    width: 85%;
+    font-family: Inter;
+    font-size: map-get($font-size, "m-l");
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    margin-top: 2rem;
+  }
+}
+
+.div7Button {
+  display: none;
+  @include devices(desktop) {
+    width: 145px;
+    height: 48px;
+    font-family: NeueMachina;
+    font-size: map-get($font-size, "s");
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    margin-top: 2rem;
+    color: $color-8;
+    background-color: $color-5;
+    border: 2px solid $color-1;
+    box-shadow: 3px 3px 0px $color-1;
+    border-radius: 6px;
+  }
+}
+
+.gridButton {
+  @include flex(row, center, center);
+  width: 175px;
+  height: 48px;
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  color: $color-8;
+  background-color: $color-5;
+  border: 2px solid $color-1;
+  box-shadow: 3px 3px 0px $color-1;
+  border-radius: 6px;
+  @include devices(desktop) {
+    display: none;
+  }
+}

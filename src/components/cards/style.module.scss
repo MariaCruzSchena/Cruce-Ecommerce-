@@ -1,0 +1,221 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.cardContainer {
+  width: 142px;
+  height: 298px;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    @include flex(column, center, center);
+    width: 260px;
+    height: 510px;
+  }
+}
+.cardWrapperTop {
+  @include flex(column, center, center);
+  position: relative;
+  width: 142px;
+  height: 178px;
+
+  @include devices(desktop) {
+    @include flex(column, flex-start, center);
+    position: relative;
+    width: 130px;
+    height: 178px;
+  }
+}
+
+.productImg {
+  width: 142px;
+  height: 178px;
+
+  @include devices(desktop) {
+    width: 210px;
+    height: 288px;
+  }
+}
+
+.productDiscountIcon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 5px;
+  bottom: -17px;
+
+  @include devices(desktop) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 15px;
+    bottom: -17px;
+  }
+}
+
+.productDiscount {
+  color: $color-8;
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: map-get($font-size, "x-s");
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 28px;
+  bottom: -30px;
+  transform: rotate(-15deg);
+
+  @include devices(desktop) {
+    color: $color-8;
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "x-s");
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 37px;
+    bottom: -32px;
+    transform: rotate(-15deg);
+  }
+}
+
+.cardWrapperBottom {
+  width: 142px;
+  height: 120px;
+  margin-top: 1.5rem;
+
+  @include devices(desktop) {
+    width: 210px;
+    height: 288px;
+    margin-top: 1.5rem;
+  }
+}
+
+.cardBrand {
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "s-m");
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 18px;
+  color: $color-2;
+
+  @include devices(desktop) {
+    font-family: NeueMachina;
+    font-size: map-get($font-size, "m");
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 18px;
+    color: $color-2;
+  }
+}
+
+.cardTitle,
+.cardInfo,
+.cardPrice,
+.cardTotal,
+.cardDiscount {
+  font-family: Inter;
+  font-size: map-get($font-size, "x-s");
+  font-weight: 400;
+  line-height: 18px;
+
+  @include devices(desktop) {
+    font-family: Inter;
+    font-size: map-get($font-size, "s");
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.cardInfo {
+  color: $color-10;
+  margin-top: 5px;
+  @include devices(desktop) {
+    color: $color-10;
+    margin-top: 12px;
+  }
+}
+
+.cardDues {
+  font-family: Inter;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 700;
+  line-height: 24px;
+
+  @include devices(desktop) {
+    font-family: Inter;
+    font-size: map-get($font-size, "m-l");
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.cardTotal {
+  color: $color-7;
+  text-decoration: line-through;
+
+  @include devices(desktop) {
+    color: $color-7;
+    text-decoration: line-through;
+  }
+}
+
+.cardDiscount {
+  color: $color-4;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 700;
+  margin-left: 0.5rem;
+
+  @include devices(desktop) {
+    color: $color-4;
+    font-size: map-get($font-size, "s-m");
+    font-weight: 700;
+    margin-left: 0.5rem;
+  }
+}
+
+.cardBuyButton {
+  display: none;
+
+  @include devices(desktop) {
+    @include flex(row, center, center);
+    width: 60px;
+    height: 48px;
+    border: 2px solid $color-3;
+    background-color: $color-8;
+    padding: 6px 12px;
+    margin-top: 1rem;
+  }
+}
+
+button img {
+  display: none;
+
+  @include devices(desktop) {
+    display: inline-flex;
+    width: 26px;
+    height: 22px;
+  }
+}
+
+.cardNoStockButton {
+  display: none;
+
+  @include devices(desktop) {
+    @include flex(row, center, center);
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "s-m");
+    line-height: 18px;
+    width: 151px;
+    height: 48px;
+    padding: 15px 18px;
+    background: $color-8;
+    border: 2px solid $color-1;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px $color-1;
+  }
+}
