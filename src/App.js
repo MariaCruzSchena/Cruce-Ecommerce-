@@ -10,7 +10,7 @@ import {
   getRecommended,
 } from "./utils";
 import { setProducts } from "./state/products";
-import { setFavorite } from "./state/favourite";
+import { setFavorite } from "./state/favorite";
 import { setMostSearched } from "./state/mostSearched";
 import { setNew } from "./state/new";
 import { setRecommended } from "./state/recommended";
@@ -21,10 +21,10 @@ function App() {
 
   useEffect(() => {
     getAllProducts().then((res) => dispatch(setProducts(res)));
-    getFavorite().then((res) => dispatch(setFavorite(res)));
+    getFavorite().then((res) => dispatch(setFavorite(res[0])));
     getMostSearched().then((res) => dispatch(setMostSearched(res)));
     getNew().then((res) => dispatch(setNew(res)));
-    getRecommended().then((res) => dispatch(setRecommended(res)));
+    getRecommended().then((res) => dispatch(setRecommended(res)));  
   }, [dispatch]);
 
   return (

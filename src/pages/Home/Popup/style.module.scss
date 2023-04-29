@@ -20,7 +20,7 @@
 }
 
 .popupInnerWrapper {
-  width: 93%;
+  width: 90%;
 }
 
 .popupMsgMobile {
@@ -32,7 +32,6 @@
   overflow: hidden;
   white-space: nowrap;
   color: $color-8;
-
   @include devices(desktop) {
     display: none;
   }
@@ -52,15 +51,16 @@
   }
 }
 
-button {
+.popupBtn {
   width: 20px;
   height: 20px;
-  background-color: $color-2;
+  background-color: $color-2; 
   border: none;
   cursor: pointer;
 }
 
-button img {
+button .cross{
+  display: inline-block;
   width: 10px;
   height: 10px;
 }

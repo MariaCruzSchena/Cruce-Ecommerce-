@@ -22,43 +22,6 @@
   transform: rotate(-60deg);
 }
 
-//Details
-.detailCardContainer {
-  @include flex(row, center, center);
-}
-
-.detailCardWrapper {
-  @include flex(column, center, flex-start);
-  margin: 0 1rem 0 0.5rem;
-}
-
-img {
-  width: 30px;
-  height: 21px;
-}
-
-.detailCardTitle {
-  font-family: NeueMachina;
-  font-size: map-get($font-size, "s-m");
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.1rem;
-}
-
-.detailCardSubtitle, .detailCardSubtitleDiff {
-  font-family: Inter;
-  font-size: map-get($font-size, "x-s");
-  font-weight: 700;
-  letter-spacing: 0.05em;    
-}
-
-.detailCardSubtitle{
-  color: $color-4;
-}
-
-.detailCardSubtitleDiff{
-  color: $color-7;
-}
 
 //Searchbar
 .searchbarContainer {

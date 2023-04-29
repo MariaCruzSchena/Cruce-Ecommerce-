@@ -1,13 +1,12 @@
 import React from "react";
-import greenCart from "../../assets/images/greenCart.svg";
-import discount from "../../assets/images/discount.svg";
+import greenCart from "../../../assets/images/greenCart.svg"
+import discount from "../../../assets/images/discount.svg";
 import style from "./style.module.scss";
 
-const ProductCard = ({ product }) => {
-  console.log("soy el producto", product);
+const ProductCard = ({ product, column=true }) => {
   return (
     product?.brand && (
-      <div className={style.cardContainer}>
+      <div className={column ? style.cardContainer : style.cardContainerRow}>
         <div className={style.cardWrapperTop}>
           <img
             className={style.productImg}
@@ -21,11 +20,11 @@ const ProductCard = ({ product }) => {
                 src={discount}
                 alt="product"
               />{" "}
-              <span  className={style.productDiscount}>{product.discount}%</span>
+              <span className={style.productDiscount}>{product.discount}%</span>
             </>
           )}
         </div>
-        <div className={style.cardWrapperBottom}>
+        <div className={column ? style.cardWrapperBottom : style.cardWrapperBottomRow}>
           <p className={style.cardBrand}>{product.brand}</p>
           <p className={style.cardTitle}>{product.title}</p>
           <p className={style.cardInfo}>6 Cuotas s/interés de</p>

@@ -5,91 +5,57 @@
 * {
   box-sizing: border-box;
 }
+
 .divMain {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 10px;
-  grid-row-gap: 0px;
-
+  grid-row-gap: 0px;  
+  @include devices(tablet) {
+    grid-column-gap: 0px;
+    padding: 1rem;
+  }
   @include devices(desktop) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(21, 1fr);
-    grid-column-gap: 70px;
+    grid-column-gap: 50px;
     grid-row-gap: 0px;
-    margin: 2rem 0 0 3rem;
+    padding: 2rem 0 0 2rem;
   }
 }
 
 .div1 {
-  grid-area: 2 / 1 / 4 / 2;
-  @include flex(column, flex-start, center);
-  @include devices(desktop) {
-    grid-area: 1 / 1 / 9 / 2;
-  }
-}
-.div2 {
-  grid-area: 3 / 2 / 6 / 3;
-  @include flex(column, flex-start, center);
-  @include devices(desktop) {
-    grid-area: 3 / 2 / 11 / 3;
-  }
-}
-.div3 {
-  grid-area: 4 / 1 / 8/ 2;
-  @include flex(column, flex-start, center);
-  @include devices(desktop) {
-    grid-area: 10 / 1 / 18 / 2;
-  }
-}
-.div4 {
-  grid-area: 5 / 2 / 10 / 3;
-  @include flex(column, flex-start, center);
-  @include devices(desktop) {
-    grid-area: 13 / 2 / 21 / 3;
-  }
-}
-.div5 {
-  display: none;
-  @include devices(desktop) {
-    display: block;
-    grid-area: 10 / 3 / 18 / 4;
-  }
-}
-.div6 {
-  display: none;
-  @include devices(desktop) {
-    display: block;
-    grid-area: 12 / 4 / 20 / 5;
-  }
-}
-.div7 {
   grid-area: 1 / 1 / 2 / 3;
   @include flex(column, space-evenly, center);
-
+  @include devices(tablet) {
+    @include flex(column, center, flex-start);
+    padding-left: 2rem;    
+  }
+  @include devices(laptop) {    
+    padding-left: 3rem;    
+  }
   @include devices(desktop) {
     grid-area: 2 / 3 / 8 / 5;
     @include flex(column, space-evenly, flex-start);
-    margin-left: 2rem;
+    padding-left: 3rem;
   }
 }
 
-.div8 {
-  grid-area: 10 / 1 / 11 / 3;
-  @include devices(desktop) {
-    display: none;
-  }
-}
-
-.div7Title {
+.div1Title {
+  width: 90%;
   overflow-wrap: break-word;
   font-family: NeueMachina;
   font-size: map-get($font-size, "x-l");
   font-weight: 800;
   line-height: 30px;
-  margin-top: 2rem;
+  margin-top: 2rem;    
   text-align: center;
+  @include devices(tablet) {
+    text-align: left;
+    margin-top: 0;    
+  }
   @include devices(desktop) {
     width: 90%;
     font-size: map-get($font-size, "xxx-l");
@@ -99,14 +65,20 @@
   }
 }
 
-.div7Subtitle {
+.div1Subtitle {
+  width: 90%;
   font-family: Inter;
   font-size: map-get($font-size, "m");
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.03em;
-  margin-top: 2rem;
+  margin: 1rem 0 ;  
   text-align: center;
+
+  @include devices(tablet) {
+    font-size: map-get($font-size, "m-l");
+    text-align: left;
+  }
   @include devices(desktop) {
     width: 85%;
     font-family: Inter;
@@ -118,9 +90,10 @@
   }
 }
 
-.div7Button {
+.div1Button {
   display: none;
   @include devices(desktop) {
+    display: inline-block;
     width: 145px;
     height: 48px;
     font-family: NeueMachina;
@@ -137,7 +110,71 @@
   }
 }
 
-.gridButton {
+.div2 {
+  grid-area: 2 / 1 / 4 / 2;
+  @include flex(column, flex-start, center);
+  @include devices(tablet) {
+    margin-bottom: 2rem;
+  }
+  @include devices(desktop) {
+    grid-area: 1 / 1 / 9 / 2;
+  }
+}
+
+.div3 {
+  grid-area: 3 / 2 / 6 / 3;
+  @include flex(column, flex-start, center);
+  @include devices(tablet) {
+    margin-bottom: 2rem;
+  }
+  @include devices(desktop) {
+    grid-area: 3 / 2 / 11 / 3;
+  }
+}
+
+.div4 {
+  grid-area: 4 / 1 / 8/ 2;
+  @include flex(column, flex-start, center);
+  @include devices(desktop) {
+    grid-area: 10 / 1 / 18 / 2;
+  }
+}
+
+.div5 {
+  grid-area: 5 / 2 / 10 / 3;
+  @include flex(column, flex-start, center);
+  @include devices(tablet) {
+    margin-bottom: 2rem;
+  }
+  @include devices(desktop) {
+    grid-area: 13 / 2 / 21 / 3;
+  }
+}
+
+.div6 {
+  display: none;
+  @include devices(desktop) {
+    @include flex(column, flex-start, center);
+    grid-area: 10 / 3 / 18 / 4;
+  }
+}
+
+.div7 {
+  display: none;
+  @include devices(desktop) {
+    @include flex(column, flex-start, center);    
+    grid-area: 12 / 4 / 20 / 5;
+  }
+}
+
+.div8 {
+  grid-area: 10 / 1 / 11 / 3;
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.div8Button {
   @include flex(row, center, center);
   width: 175px;
   height: 48px;

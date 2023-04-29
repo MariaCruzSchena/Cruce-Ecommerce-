@@ -1,0 +1,51 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+
+.carrouselsContainer {
+  @include flex(column, space-evenly, center);
+  margin-top: 48px;
+  @include devices(desktop) {
+    @include flex(column, space-evenly, flex-start);
+    margin-top: 0;
+    padding-left: 48px;
+  }
+}
+
+//Brand Carrousel
+.brandsTitle {
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "l");
+  font-weight: 800;
+  line-height: 30px;
+  color: $color-2;
+}
+
+.brandsCarrousel {
+  @include flex(row, space-evenly, center);
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.brandsScroll {
+  display: none;
+  @include devices(desktop) {
+    @include flex(row, flex-start, center);
+  }
+}
+
+
+//Shipping Details Carrousel
+.shippingDetailsCarrousel{
+  @include flex(column, space-evenly, center);  
+  margin-top: 1rem;
+
+  @include devices(desktop){
+    display: none;
+  }
+}

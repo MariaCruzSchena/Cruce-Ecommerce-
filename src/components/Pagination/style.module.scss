@@ -1,0 +1,20 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.pagContainerRow{
+    width: 100%;
+    @include flex(row, space-between, center);
+    margin-top: 24px;
+}
+
+.pagContainerReverse{
+    width: 100%;
+    @include flex(row-reverse, space-between, center)
+}
+
+.newArrowContainer{
+    display: inline-block;
+    max-width: auto;
+    @include flex(row, flex-start, center)
+}

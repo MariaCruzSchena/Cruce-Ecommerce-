@@ -1,0 +1,72 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.todaysToyContainer {
+  @include flex(column, center, center);
+  @include devices(desktop) {
+    @include flex(column, center, flex-start);
+    margin-top: 3rem;
+  }
+}
+
+.todaysToyTitleWrapper {
+  @include flex(row, flex-start, center);
+}
+
+.todaysToyTitle {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: map-get($font-size, "xx-l");
+  line-height: 42px;
+  letter-spacing: -0.01em;
+  color: $color-5;
+  text-align: center;
+  @include devices(desktop) {
+    font-size: map-get($font-size, "xxxxx-l");
+    line-height: 96px;
+    text-align: left;
+    padding-left: 48px;
+  }
+}
+
+.todaysToyInfo {
+  @include flex(column, center, center);
+  @include devices(desktop) {
+    @include flex(row-reverse, center, center);
+    width: 100%;
+    padding: 48px 48px 0 100px;
+    margin-left: auto;
+  }
+}
+
+.todaysToyIframe {
+  width: 296px;
+  height: 168px;
+  border: 6px solid $color-1;
+  border-radius: 12px;
+  margin-top: 1rem;
+  @include devices(tablet) {
+    width: 438px;
+    height: 300px;
+  }
+  @include devices(desktop) {
+    width: 800px;
+    height: 510px;
+    margin-left: 24px;
+  }
+}
+
+.todaysToyMobile {
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.todaysToyDesktop {
+  display: none;
+  @include devices(desktop) {
+    display: flex;
+    padding-top: 24px;
+  }
+}

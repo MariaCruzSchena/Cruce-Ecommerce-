@@ -1,0 +1,67 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.newContainer {
+  @include flex(column, center, center);
+  margin-top: 69px;
+  padding: 0 12px;
+  @include devices(desktop) {
+    padding: 0 48px;
+  }
+}
+
+.newTopWrapper {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  margin-bottom: 24px;
+  @include devices(desktop) {
+    @include flex(row, flex-start, flex-end);
+  }
+}
+
+.newTitle {
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: map-get($font-size, "l");
+  line-height: 30px;
+  text-align: left;
+  @include devices(desktop) {
+    font-size: map-get($font-size, "x-l");
+  }
+}
+
+.newSubtitle {
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: map-get($font-size, "xxx-s");
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;  
+  color: $color-7;
+  margin-top: 15px;
+  @include devices(desktop) {
+    padding: 0 0 0.2rem 1rem;
+  }
+}
+
+.newBottomWrapperMobile {
+  @include flex(column, center, center);
+  width: 100%;
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.newBottomWrapperDesktop {
+  display: none;
+
+  @include devices(desktop) {
+    @include flex(column, center, center);
+    width: 100%;
+  }
+}
+.newInnerWrapper {
+  @include flex(row, space-evenly, center);
+  width: 100%;
+}

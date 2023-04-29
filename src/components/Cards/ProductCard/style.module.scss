@@ -1,36 +1,50 @@
-@import "../../assets/styles/maps";
-@import "../../assets/styles/mixins";
-@import "../../assets/styles/variables";
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
 
+//Product Card
 .cardContainer {
   width: 142px;
-  height: 298px;
   @include flex(column, flex-start, center);
+  @include devices(tablet) {
+    width: 210px;
+  }
   @include devices(desktop) {
-    @include flex(column, center, center);
-    width: 260px;
     height: 510px;
   }
 }
+
+.cardContainerRow {
+  @include flex(row, center, center);
+  margin-top: 1rem;
+  padding: 0 1rem;
+  height: 164px;
+  @include devices(tablet) {
+    height: auto;
+    margin-top: 1.5rem;
+  }
+}
+
 .cardWrapperTop {
   @include flex(column, center, center);
   position: relative;
   width: 142px;
-  height: 178px;
 
+  @include devices(tablet) {
+    width: 210px;
+  }
   @include devices(desktop) {
     @include flex(column, flex-start, center);
     position: relative;
-    width: 130px;
-    height: 178px;
+    width: 210px;
+    height: 288px;
   }
 }
 
 .productImg {
   width: 142px;
   height: 178px;
-
-  @include devices(desktop) {
+  @include devices(tablet) {
     width: 210px;
     height: 288px;
   }
@@ -84,13 +98,23 @@
 
 .cardWrapperBottom {
   width: 142px;
-  height: 120px;
   margin-top: 1.5rem;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     width: 210px;
     height: 288px;
     margin-top: 1.5rem;
+  }
+}
+
+.cardWrapperBottomRow {
+  @include flex(column, center, flex-start);
+  margin-left: 1rem;
+
+  @include devices(tablet) {
+    width: 210px;
+    height: 288px;
+    margin-top: auto;
   }
 }
 
@@ -102,7 +126,7 @@
   line-height: 18px;
   color: $color-2;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     font-family: NeueMachina;
     font-size: map-get($font-size, "m");
     font-weight: bold;
@@ -122,7 +146,7 @@
   font-weight: 400;
   line-height: 18px;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     font-family: Inter;
     font-size: map-get($font-size, "s");
     font-weight: 400;
@@ -133,7 +157,7 @@
 .cardInfo {
   color: $color-10;
   margin-top: 5px;
-  @include devices(desktop) {
+  @include devices(tablet) {
     color: $color-10;
     margin-top: 12px;
   }
@@ -145,7 +169,7 @@
   font-weight: 700;
   line-height: 24px;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     font-family: Inter;
     font-size: map-get($font-size, "m-l");
     font-weight: 700;
@@ -157,7 +181,7 @@
   color: $color-7;
   text-decoration: line-through;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     color: $color-7;
     text-decoration: line-through;
   }
@@ -169,7 +193,7 @@
   font-weight: 700;
   margin-left: 0.5rem;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     color: $color-4;
     font-size: map-get($font-size, "s-m");
     font-weight: 700;
@@ -180,7 +204,7 @@
 .cardBuyButton {
   display: none;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     @include flex(row, center, center);
     width: 60px;
     height: 48px;
@@ -191,10 +215,10 @@
   }
 }
 
-button img {
+.cardBuyButton img {
   display: none;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     display: inline-flex;
     width: 26px;
     height: 22px;
@@ -204,7 +228,7 @@ button img {
 .cardNoStockButton {
   display: none;
 
-  @include devices(desktop) {
+  @include devices(tablet) {
     @include flex(row, center, center);
     font-family: NeueMachina;
     font-weight: 800;

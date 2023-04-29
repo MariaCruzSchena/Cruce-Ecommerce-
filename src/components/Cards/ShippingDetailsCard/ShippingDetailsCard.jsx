@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-const DetailCard = ({ img, imgName, title, subtitle }) => {
+const ShippingDetailsCard = ({ img, imgName, title, subtitle }) => {
   const className = imgName === "motorcycle" ? styles.detailCardSubtitleDiff : styles.detailCardSubtitle;
   return (
     <div className={styles.detailCardContainer}>
@@ -16,4 +16,4 @@ const DetailCard = ({ img, imgName, title, subtitle }) => {
   );
 };
 
-export default DetailCard;
+export default ShippingDetailsCard;

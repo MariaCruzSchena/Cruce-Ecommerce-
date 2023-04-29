@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import allProductsReducer from "./products";
-import favoriteProductReducer from "./products";
-import mostSearchedProductReducer from "./products";
-import newProductsReducer from "./products";
-import recommendedProductsReducer from "./products";
+import favoriteProductReducer from "./favorite";
+import mostSearchedProductReducer from "./mostSearched";
+import newProductsReducer from "./new";
+import recommendedProductsReducer from "./recommended";
 
 const store = configureStore({
   reducer: {

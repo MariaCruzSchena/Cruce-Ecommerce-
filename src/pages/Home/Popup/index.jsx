@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style.module.scss";
+import style from "./style.module.scss";
 import cross from "../../../assets/images/cross.svg";
 
 const Popup = ({ anchorEl, setAnchorEl }) => {
@@ -8,18 +8,17 @@ const Popup = ({ anchorEl, setAnchorEl }) => {
   };
 
   return (
-    <div className={styles.popupWrapper}>
-      <div className={styles.popupInnerWrapper}>
-        <p className={styles.popupMsgMobile}>
+    <div className={style.popupWrapper}>
+      <div className={style.popupInnerWrapper}>
+        <p className={style.popupMsgMobile}>
           Mantené pulsado cualquier artículo para agregarlo al carrito
         </p>
-        <p className={styles.popupMsgDesktop}>
+        <p className={style.popupMsgDesktop}>
           Sólo por hoy: evío gratis en todos los productos!
         </p>
       </div>
-
-      <button onClick={closeHandler}>
-        <img src={cross} alt="cross" />
+      <button className={style.popupBtn} onClick={closeHandler}>
+        <img className={style.cross} src={cross} alt="cross" />
       </button>
     </div>
   );
