@@ -17,10 +17,9 @@ const TodaysToy = () => {
           width="651"
           height="366"
           src="https://www.youtube.com/embed/9GJZZNM1eF4"
-          title="Game of Thrones | The Great Funko Pop! War Is Here"
-          frameborder="0"
+          title="Game of Thrones | The Great Funko Pop! War Is Here"          
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         />
         <div className={style.todaysToyMobile}>
           <ProductCard product={toy} column={false} />

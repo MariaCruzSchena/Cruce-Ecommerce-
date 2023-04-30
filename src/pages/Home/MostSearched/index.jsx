@@ -10,8 +10,8 @@ const MostSearched = () => {
       <p className={style.mostSearchedTitle}>
         Lo más <br /> buscado
       </p>
-      {products.map((product) => (
-        <div className={style.mostSearchedWrapper}>
+      {products.map((product, i) => (
+        <div className={style.mostSearchedWrapper} key={i}>
           <img
             className={style.mostSearchedImg}
             src={product.image}

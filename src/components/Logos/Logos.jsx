@@ -1,12 +1,12 @@
-import React from 'react'
-import style from './style.module.scss'
+import React from "react";
+import style from "./style.module.scss";
 
-const Logos = ({brand}) => {
+const Logos = ({ brand }) => {
   return (
     <div className={style.brandsItemWrapper}>
-    <img src={brand} alt={`${brand}logo`} className={style.brandsItem} />
+      <img src={brand} alt={`${brand}logo`} className={style.brandsItem} />
     </div>
-  )
-}
+  );
+};
 
-export default Logos
+export default Logos;

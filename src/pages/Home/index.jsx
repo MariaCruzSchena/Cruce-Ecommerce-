@@ -8,7 +8,7 @@ import TodaysToy from "./TodaysToy";
 import MostSearched from "./MostSearched";
 import NewProducts from "./New";
 import Recommended from "./Recommended";
-
+import Backpacks from "./Backpacks";
 const Home = () => {
   const [anchorEl, setAnchorEl] = React.useState(true);
   return (
@@ -23,6 +23,7 @@ const Home = () => {
       <TodaysToy />
       <MostSearched />
       <NewProducts />
+      <Backpacks />
       <Recommended />
     </div>
   );

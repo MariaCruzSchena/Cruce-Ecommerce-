@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "../Cards/ProductCard/ProductCard";
 import Pagination from "../Pagination/Pagination";
-import { newPagination } from "../../utils/newPagnation";
+import { newPagination } from "../../utils/pagnationHandler";
 import style from "./style.module.scss"
 
 const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
@@ -16,8 +16,8 @@ const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
       </div>
       <div className={style.newBottomWrapperMobile}>
         <div className={style.newInnerWrapper}>
-          {mobileData.currentProducts.map((product) => (
-            <ProductCard product={product} />
+          {mobileData.currentProducts.map((product, i) => (
+            <ProductCard key={i} product={product} />
           ))}
         </div>
         <Pagination
@@ -36,7 +36,7 @@ const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
         <Pagination
           currentPage={currentPage}
           totalPages={desktopData.totalPages}
-          onPageChange={(page) => setCurrentPage(page)}
+          onPageChange={(page) => setCurrentPage(page)}          
         />
       </div>
     </div>

@@ -1,0 +1,236 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.jansportContainer {
+  position: relative;
+  margin-top: 36px;
+  @include devices(desktop) {
+    @include flex(row, space-evenly, flex-start);
+    //height: 100vh;
+  }
+}
+.jansportImages {
+    @include devices(desktop) {
+      width: 65%;
+    }
+  }
+
+.jansportImage {
+  @include devices(desktop) {
+    width: 100%;
+  }
+}
+
+.jansportImage img {
+  width: 100%;
+  height: auto;
+}
+
+.jansportImage2 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  z-index: 1;
+  @include devices(tablet) {
+    width: 200px;
+    height: 200px;
+    right: 25px;
+    top: 100px;
+  }
+  @include devices(laptop) {
+    width: 300px;
+    height: 300px;
+    right: 35px;
+    top: 150px;
+  }
+  @include devices(desktop) {
+    width: 408px;
+    height: 408px;
+    right: 35%;
+    top: 30%;
+  }
+}
+
+.jansportBottomWrapper {
+  @include flex(column, space-between, flex-start);
+  padding: 0 0 0 12px;
+  @include devices(desktop) {
+   // width: 25%;
+  }
+}
+
+//Product Card
+.cardContainer {
+  width: 240px;
+  margin: 2rem 0 1rem 0;
+  @include flex(column, flex-start, center);
+  @include devices(tablet) {
+  }
+  @include devices(desktop) {
+  }
+}
+
+.cardWrapperTop {
+  @include flex(column, center, center);
+  position: relative;
+  width: 100%;
+
+  @include devices(tablet) {
+    width: 210px;
+  }
+  @include devices(desktop) {
+    @include flex(column, flex-start, center);
+    position: relative;
+    width: 210px;
+    height: 288px;
+  }
+}
+
+.productImg {
+  width: 240px;
+  height: 240px;
+}
+
+
+.cardWrapperBottom {
+  width: 210px;
+  margin-top: 1rem;
+
+  @include devices(tablet) {
+    width: 210px;
+    margin-top: 1rem;
+  }
+}
+
+.cardBrand {
+  font-family: NeueMachina;
+  font-size: map-get($font-size, "s-m");
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 18px;
+  color: $color-2;
+
+  @include devices(tablet) {
+    font-family: NeueMachina;
+    font-size: map-get($font-size, "m");
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 18px;
+    color: $color-2;
+  }
+}
+
+.cardTitle,
+.cardInfo,
+.cardPrice,
+.cardTotal,
+.cardDiscount {
+  font-family: Inter;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 400;
+  line-height: 18px;
+
+  @include devices(tablet) {
+    font-family: Inter;
+    font-size: map-get($font-size, "s");
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.cardInfo {
+  color: $color-10;
+  margin-top: 5px;
+  @include devices(tablet) {
+    color: $color-10;
+    margin-top: 12px;
+  }
+}
+
+.cardDues {
+  font-family: Inter;
+  font-size: map-get($font-size, "m-l");
+  font-weight: 700;
+  line-height: 24px;
+
+  @include devices(tablet) {
+    font-family: Inter;
+    font-size: map-get($font-size, "m-l");
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.cardTotal {
+  color: $color-7;
+  text-decoration: line-through;
+
+  @include devices(tablet) {
+    color: $color-7;
+    text-decoration: line-through;
+  }
+}
+
+.cardDiscount {
+  color: $color-1;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 700;
+  margin-left: 0.5rem;
+
+  @include devices(tablet) {
+    color: $color-4;
+    font-size: map-get($font-size, "s-m");
+    font-weight: 700;
+    margin-left: 0.5rem;
+  }
+}
+
+.cardBuyButton {
+  display: none;
+
+  @include devices(tablet) {
+    @include flex(row, center, center);
+    width: 60px;
+    height: 48px;
+    border: 2px solid $color-3;
+    background-color: $color-8;
+    padding: 6px 12px;
+    margin-top: 1rem;
+  }
+}
+
+.cardBuyButton img {
+  display: none;
+
+  @include devices(tablet) {
+    display: inline-flex;
+    width: 26px;
+    height: 22px;
+  }
+}
+
+.cardNoStockButton {
+  display: none;
+
+  @include devices(tablet) {
+    @include flex(row, center, center);
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "s-m");
+    line-height: 18px;
+    width: 151px;
+    height: 48px;
+    padding: 15px 18px;
+    background: $color-8;
+    border: 2px solid $color-1;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px $color-1;
+  }
+}
