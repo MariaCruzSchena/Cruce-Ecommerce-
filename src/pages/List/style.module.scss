@@ -9,3 +9,12 @@
 
     }
 }
+
+.listDivider{
+    border-bottom: 1px solid $color-12;
+    margin: 28px 0;
+    @include devices(desktop){
+       
+
+    }
+}

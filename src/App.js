@@ -8,12 +8,14 @@ import {
   getMostSearched,
   getNew,
   getRecommended,
+  getList,
 } from "./utils";
 import { setProducts } from "./state/products";
 import { setFavorite } from "./state/favorite";
 import { setMostSearched } from "./state/mostSearched";
 import { setNew } from "./state/new";
 import { setRecommended } from "./state/recommended";
+import { setList } from "./state/list";
 import { useDispatch } from "react-redux";
 
 function App() {
@@ -24,7 +26,8 @@ function App() {
     getFavorite().then((res) => dispatch(setFavorite(res[0])));
     getMostSearched().then((res) => dispatch(setMostSearched(res)));
     getNew().then((res) => dispatch(setNew(res)));
-    getRecommended().then((res) => dispatch(setRecommended(res)));  
+    getRecommended().then((res) => dispatch(setRecommended(res)));
+    getList().then((res) => dispatch(setList(res.data.items)));
   }, [dispatch]);
 
   return (
@@ -32,7 +35,7 @@ function App() {
       <div className="App"></div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />       
+        <Route path="/list" element={<List />} />
       </Routes>
     </>
   );

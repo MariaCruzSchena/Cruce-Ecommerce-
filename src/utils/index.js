@@ -24,3 +24,8 @@ export const getRecommended = async () => {
   const recommended = await getProducts("coleccion", "104");
   return recommended.data;
 };
+
+export const getList = async () => {
+  const list = await getProducts("list");
+  return list;
+};

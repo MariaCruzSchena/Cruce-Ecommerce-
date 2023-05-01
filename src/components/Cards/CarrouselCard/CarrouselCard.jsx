@@ -3,10 +3,15 @@ import arrowLeft from "../../../assets/images/arrows/arrowLeft.svg";
 import arrowRight from "../../../assets/images/arrows/arrowRight.svg";
 import ShippingDetailsCard from "../ShippingDetailsCard/ShippingDetailsCard";
 import Logos from "../../Logos/Logos";
-import style from "./style.module.scss"
+import style from "./style.module.scss";
 
-const CarrouselCard = ({ array, kind, currentPage, setCurrentPage, totalPages }) => {
-console.log("arrrr", array)
+const CarrouselCard = ({
+  array,
+  kind,
+  currentPage,
+  setCurrentPage,
+  totalPages,
+}) => {
   const nextPageHandler = () => {
     currentPage + 1 > totalPages
       ? setCurrentPage(currentPage)
