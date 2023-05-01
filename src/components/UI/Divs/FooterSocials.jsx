@@ -11,19 +11,19 @@ const FooterSocials = () => {
       <div className={style.socials}>
         <p>Instagram</p>
         <Link>
-          <img src={instagram} />
+          <img src={instagram} alt="instagram"/>
         </Link>
       </div>
       <div className={style.socials}>
         <p>Youtube</p>
         <Link>
-          <img src={youtube} />
+          <img src={youtube} alt="youtube"/>
         </Link>
       </div>
       <div className={style.socials}>
         <p>Facebook</p>
         <Link>
-          <img src={facebook} />
+          <img src={facebook} alt="facebook"/>
         </Link>
       </div>
     </>
