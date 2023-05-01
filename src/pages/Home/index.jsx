@@ -8,7 +8,10 @@ import TodaysToy from "./TodaysToy";
 import MostSearched from "./MostSearched";
 import NewProducts from "./New";
 import Recommended from "./Recommended";
+import Countdown from "./Countdown";
 import Backpacks from "./Backpacks";
+import HalfCircleBtn from "../../components/UI/Buttons/HalfCircleBtn";
+import Footer from "../../layouts/Footer";
 const Home = () => {
   const [anchorEl, setAnchorEl] = React.useState(true);
   return (
@@ -24,7 +27,10 @@ const Home = () => {
       <MostSearched />
       <NewProducts />
       <Backpacks />
+      <Countdown />
       <Recommended />
+      <HalfCircleBtn />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,11 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.listHeader{
+    @include devices(desktop){
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}

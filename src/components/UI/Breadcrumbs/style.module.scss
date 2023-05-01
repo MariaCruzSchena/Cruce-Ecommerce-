@@ -1,0 +1,27 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.breadcrumbsContainer {
+  @include flex(row, space-evenly, center);
+  width: 70%;
+  margin: 2rem 0;
+  @include devices(desktop) {
+    width: 20%;
+    margin-bottom: 0;
+   }
+
+  p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: map-get($font-size, "s");
+    line-height: 18px;
+    color: $color-7;
+  }
+
+  p.breadcrumbsDiff {
+    font-weight: 700;
+    font-size: map-get($font-size, "s-m");
+    color: $color-1;
+  }
+}

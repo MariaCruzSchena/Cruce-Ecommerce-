@@ -3,21 +3,22 @@ $color-2: #7d5a94;
 $color-3: #b7dd8b;
 $color-4: #ec2227;
 $color-5:  #F26522;
-$color-6: #ffc400;
+$color-6: #FDB913;
 $color-7: #8c8c8c;
 $color-8: #ffffff;
 $color-9: #C8C8C8;
 $color-10: #505050;
 $color-11:  #76B043;
+$color-12: #F0F0F0;
 
 @font-face {
   font-family: NeueMachina;
-  src: url(../../assets/styles/NeueMachina-Ultrabold.otf);
+  src: url(../../assets/styles/fonts/NeueMachina-Ultrabold.otf);
 }
 
 @font-face {
   font-family: Inter;
-  src: url(../../assets/styles/Inter-Regular.ttf);
+  src: url(../../assets/styles/fonts/Inter-Regular.ttf);
 }
 
 $jansport: "src/assets/images/jansport.jpg";

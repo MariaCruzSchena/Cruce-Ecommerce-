@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import greenCart from "../../../assets/images/greenCart.svg";
+import greenCart from "../../../assets/images/ui/greenCart.svg";
 
 const BackpackCard = ({ product }) => {
   return (

@@ -1,0 +1,13 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.filtersContainer{
+    @include flex (column, space-evenly, center);
+    height: 25vh;
+    @include devices(desktop){
+        padding: 0 48px; 
+        @include flex (row, space-between, center);
+        height: 10vh;
+    }
+}

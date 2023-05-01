@@ -1,0 +1,16 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.bannerContainer{
+    width: 100%;
+    padding: 2rem 0;
+
+    img{
+        width: 100%;
+        height: 120px;
+        @include devices(desktop){
+            height: 350px;
+        }
+    }
+}

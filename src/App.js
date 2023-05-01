@@ -32,7 +32,7 @@ function App() {
       <div className="App"></div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/list" element={<List />} />       
       </Routes>
     </>
   );

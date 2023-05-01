@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import cross from "../../../assets/images/cross.svg";
+import cross from "../../../assets/images/ui/cross.svg";
 
 const Popup = ({ anchorEl, setAnchorEl }) => {
   const closeHandler = () => {

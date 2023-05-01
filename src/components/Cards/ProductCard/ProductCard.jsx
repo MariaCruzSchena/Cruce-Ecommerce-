@@ -1,6 +1,6 @@
 import React from "react";
-import greenCart from "../../../assets/images/greenCart.svg"
-import discount from "../../../assets/images/discount.svg";
+import greenCart from "../../../assets/images/ui/greenCart.svg"
+import discount from "../../../assets/images/ui/discount.svg";
 import style from "./style.module.scss";
 
 const ProductCard = ({ product, column=true }) => {

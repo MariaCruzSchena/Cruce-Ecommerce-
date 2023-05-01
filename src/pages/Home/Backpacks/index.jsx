@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import BackpackCard from "./BackpackCard";
 import { fakeDataHandler } from "../../../utils/fakeDataHandler";
-import jansport from "./../../../assets/images/jansport.jpg";
-import jansport2 from "./../../../assets/images/jansport2.jpg";
+import jansport from "../../../assets/images/backpacks/jansport.jpg";
+import jansport2 from "../../../assets/images/backpacks/jansport2.jpg"
 import style from "./style.module.scss";
 import Pagination from "../../../components/Pagination/Pagination";
 import { carrouselPagination } from "../../../utils/pagnationHandler";
@@ -10,10 +10,7 @@ import { carrouselPagination } from "../../../utils/pagnationHandler";
 const Backpacks = () => {
   const products = fakeDataHandler();
   const [currentPage, setCurrentPage] = useState(1);
-
   const data = carrouselPagination(products, "mobile", currentPage);
-
-  console.log("aaaaaaaaaa", products);
   return (
     <div className={style.jansportContainer}>
       <div className={style.jansportImages}>

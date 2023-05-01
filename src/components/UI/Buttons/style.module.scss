@@ -1,0 +1,32 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.divBtn {
+  height: 60px;
+  width: 120px;
+  border-radius: 150px 150px 0 0;
+  background-color: $color-6;
+  @include flex(column, center, center);
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+
+  img {
+    width: 14px;
+    height: 16px;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "xxx-s");
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: $color-6;
+    margin-top: .3rem;    
+  }
+}

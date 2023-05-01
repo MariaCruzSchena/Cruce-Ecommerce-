@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./style.module.scss";
 import ShippingDetailsCard from "../../../components/Cards/ShippingDetailsCard/ShippingDetailsCard";
-import creditcard from "../../../assets/images/creditcard.svg";
-import truck from "../../../assets/images/truck.svg";
-import motorcycle from "../../../assets/images/motorcycle.svg";
+import creditcard from "../../../assets/images/ui/creditcard.svg";
+import truck from "../../../assets/images/ui/truck.svg";
+import motorcycle from "../../../assets/images/ui/motorcycle.svg";
 
 const Details = () => {
   return (

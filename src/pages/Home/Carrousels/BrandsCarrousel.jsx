@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
-import disney from "../../../assets/images/disney.svg";
-import funko from "../../../assets/images/funko.svg";
-import lol from "../../../assets/images/LOL.svg";
-import marvel from "../../../assets/images/marvel.svg";
+import disney from "../../../assets/images/brands/disney.svg";
+import funko from "../../../assets/images/brands/funko.svg";
+import lol from "../../../assets/images/brands/LOL.svg";
+import marvel from "../../../assets/images/brands/marvel.svg";
 import Arrows from "../../../components/Arrows/Arrows";
 import Logos from "../../../components/Logos/Logos";
 import { carrouselPagination } from "../../../utils/pagnationHandler";

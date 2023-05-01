@@ -1,0 +1,79 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+//FooterSocials
+.socials {
+  @include flex(row, flex-end, center);
+  @include devices(desktop){
+    @include flex(row-reverse, flex-end, center);
+    width: 50%
+  }
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  p {
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "xxx-s");
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-7;
+    margin-right: 1rem;
+      @include devices(desktop){
+        margin-left: 1rem;
+        text-align: left
+  }
+  }
+}
+
+//FooterImages
+.contentContainer {
+  @include flex(column, space-evenly, center);
+  width: 100%;
+  margin-top: 1rem;
+  @include devices(desktop){
+    display: none;
+  }
+}
+
+.contentWrapper {
+  width: 60%;
+  height: 36px;
+  margin-top: 1rem;
+  @include flex(row, space-evenly, center);
+}
+
+.contentWrapper img.cc {
+  width: 48px;
+  height: 36px;
+}
+
+.contentWrapper img.ahora18 {
+  width: 48px;
+  height: 36px;
+}
+
+.contentWrapper img.hotweek {
+  width: 42px;
+  height: 36px;
+}
+
+.contentWrapper img.afip {
+  width: 26px;
+  height: 36px;
+}
+
+.contentWrapper img.vtex {
+  width: 58px;
+  height: 20px;
+}
+
+.contentWrapper img.cruceLogo {
+  width: 68px;
+  height: 28px;
+}

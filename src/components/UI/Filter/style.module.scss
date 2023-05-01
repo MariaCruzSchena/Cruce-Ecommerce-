@@ -1,0 +1,100 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.filterContainer {
+  @include flex(row, flex-start, center);
+  border: 2px solid $color-9;
+  border-radius: 6px;
+  width: 80%;
+  padding: 9px;
+
+  @include devices(tablet) {
+    width: 60%;
+  }
+  @include devices(desktop) {
+    @include flex(row, flex-start, center);
+    border: none;
+    width: 20%;
+    margin-right: 3rem;
+  }
+}
+
+.filterBtn {
+  flex: 1;
+  border: none;
+  padding: 4px;
+  background-color: $color-8;
+  border: none;
+  outline: none;
+  font-family: Inter;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 400;
+  text-align: left;
+  @include devices(desktop) {
+    text-align: right;
+    padding-right: 1rem;
+  }
+  &:focus {
+    border: none;
+    outline: none;
+    background-color: $color-8;
+  }
+  &:active {
+    border: none;
+    outline: none;
+    background-color: $color-8;
+  }
+}
+
+.filterIcon,
+.filterIconDiff {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.filterIconDiff {
+  @include devices(desktop) {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+   
+  }
+}
+
+.filterMenu {
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  z-index: 1;
+  padding: 0;
+  margin: 5px 0 0;
+  list-style: none;
+  background-color: $color-8;
+  border: 1px solid $color-9;
+  @include devices(tablet) {
+    width: 60%;
+  }
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.filterOption {
+  font-family: Inter;
+  font-size: map-get($font-size, "s-m");
+  font-weight: 400;
+  text-align: left;
+  color: $color-7;
+  padding: 0.4rem 0.7rem;
+
+  &:hover {
+    background-color: $color-9;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import creditcard from "../../../assets/images/creditcard.svg";
-import truck from "../../../assets/images/truck.svg";
-import motorcycle from "../../../assets/images/motorcycle.svg";
+import creditcard from "../../../assets/images/ui/creditcard.svg";
+import truck from "../../../assets/images/ui/truck.svg";
+import motorcycle from "../../../assets/images/ui/motorcycle.svg";
 import { carrouselPagination } from "../../../utils/pagnationHandler";
 import CarrouselCard from "../../../components/Cards/CarrouselCard/CarrouselCard";
 

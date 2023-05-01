@@ -1,0 +1,132 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.footerContainer {
+  @include flex(column, space-evenly, center);
+  margin: 30px 0;
+  @include devices(desktop){
+    @include flex(row-reverse, center, center);
+  }
+}
+
+.footerContactWrapper {
+  width: 100%;
+  @include flex(row, space-evenly, center);
+  @include devices(desktop){
+    @include flex(row,  flex-start, center);
+    width: 33%;
+  }
+}
+
+.footerContactLeft {
+  @include flex(column, space-evenly, flex-end);
+  width: 40%;
+  @include devices(desktop){
+    display: none;
+  }
+}
+
+.footerContactTitle {
+  font-family: NeueMachina;
+  font-weight: 900;
+  font-size: map-get($font-size, "s-m");
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $color-5;
+}
+
+.footerContactSubtitle,
+.footerInputTitle {
+  font-family: NeueMachina;
+  font-weight: 900;
+  font-size: map-get($font-size, "xxx-s");
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footerContactRight {
+  width: 40%;
+  @include flex(column, space-evenly, flex-start);
+  @include devices(desktop){
+   width: 50%
+  }
+}
+
+.footerContactSubtitle {
+  color: $color-9;
+}
+
+.footerInput {
+  width: 100%;
+  height: 30px;
+  border: 1px solid $color-9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 0.5rem;
+  &::placeholder {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: map-get($font-size, "x-s");
+    line-height: 15px;
+  }
+}
+
+.footerInputBtn {
+  @include flex(row, center, center);
+  width: 70px;
+  height: 30px;
+  background-color: $color-8;
+  border: 2px solid $color-1;
+  box-shadow: 3px 3px 0px $color-1;
+  border-radius: 6px;
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: map-get($font-size, "xxx-s");
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.footerContentWrapper {
+  width: 100%;  
+  @include flex(row, space-evenly, center);
+  margin-top: 1rem;
+  @include devices(desktop){  
+    width: 66%;
+  }
+}
+.footerSocials {
+  width: 40%;
+  @include flex(column, center, flex-end);
+  @include devices(desktop){
+    @include flex(column, center, flex-end);
+    width: 33%;
+  }
+}
+.footerLinks {
+  width: 40%;
+  height: 100%;
+  @include flex(column, space-between, flex-start);
+  @include devices(desktop){
+    @include flex(column, space-between, center);
+    width: 33%;
+  }
+
+  p {
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "xxx-s");
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-7;
+    padding: .5rem 0;
+   
+  }
+}

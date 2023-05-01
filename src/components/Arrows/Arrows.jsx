@@ -1,6 +1,6 @@
 import React from "react";
-import arrowLeft from "../../assets/images/arrowLeft.svg";
-import arrowRight from "../../assets/images/arrowRight.svg";
+import arrowLeft from "../../assets/images/arrows/arrowLeft.svg";
+import arrowRight from "../../assets/images/arrows/arrowRight.svg";
 import style from "./stye.module.scss";
 
 const Arrows = ({ onPageChange, currentPage, totalPages }) => {

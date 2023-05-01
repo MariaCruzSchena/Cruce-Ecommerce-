@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss"
-import magnifiyingGlass from "../../../assets/images/magnifyingGlass.svg";
+import magnifiyingGlass from "../../../assets/images/navbar/magnifyingGlass.svg";
 
 const Searchbar = () => {
   return (

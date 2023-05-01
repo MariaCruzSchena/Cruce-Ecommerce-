@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -17,7 +17,7 @@ a{
   height: 72px;
   padding: 20px 21.5px 0 21.5px;
 
-  @include devices("desktop") {
+  @include devices(desktop) {
     @include flex(row, space-between, center);
     height: 96px;
     padding: 39px 21px 39px 21px;
@@ -28,7 +28,7 @@ a{
   @include flex(row, flex-start, flex-start);
   padding: 0;
   height: auto;
-  @include devices("desktop") {
+  @include devices(desktop) {
     @include flex(row, space-between, center);
   }
 }
@@ -36,13 +36,13 @@ a{
 .headerItemBlack {
   display: none;
 
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: flex;
     font-family: NeueMachina;
     font-size: map-get($font-size, "s-m");
     font-weight: 800;
     color: $color-1;
-    letter-spacing: 0.05em;    
+    letter-spacing: 0.05em;
     line-height: 18px;
     margin-left: 9.5px;
   }
@@ -52,7 +52,7 @@ a{
   display: none;
   font-family: Arial, Helvetica, sans-serif;
 
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: flex;
     font-size: map-get($font-size, "s-m");
     font-weight: 800;
@@ -67,7 +67,7 @@ a{
   display: none;
   font-family: NeueMachina;
 
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: flex;
     letter-spacing: 0.05em;
     font-size: map-get($font-size, "s-m");
@@ -77,8 +77,8 @@ a{
   }
 }
 
-.headerContainerMiddle {  
-  @include devices("desktop") {
+.headerContainerMiddle {
+  @include devices(desktop) {
     display: none;
   }
 }
@@ -86,7 +86,7 @@ a{
 .logo {
   width: 106px;
   height: 43px;
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: none;
   }
 }
@@ -99,24 +99,22 @@ a{
 .barsIcon {
   width: 20px;
   height: 20px;
-  @include devices("desktop") {
-    padding-top: 0;
-    width: 24px;
-    height: 20px;
+  @include devices(desktop) {
+    padding-bottom: 0.3rem;
   }
 }
 
 .cartIcon {
   width: 26px;
   height: 20px;
-  @include devices("desktop") {
+  @include devices(desktop) {
     padding-top: 0;
   }
 }
 
 .userIcon {
   display: none;
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: flex;
     width: 20px;
     height: 22px;
@@ -125,7 +123,7 @@ a{
 }
 
 .iconWrapper {
-  @include devices("desktop") {
+  @include devices(desktop) {
     @include flex(row, center, center);
     border: 1.2px solid $color-7;
     opacity: 70%;
@@ -138,7 +136,7 @@ a{
 
 .glassIcon {
   display: none;
-  @include devices("desktop") {
+  @include devices(desktop) {
     display: flex;
     width: 15.8px;
     height: 15.8px;

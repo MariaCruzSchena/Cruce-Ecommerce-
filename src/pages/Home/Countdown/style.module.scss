@@ -1,0 +1,46 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+* {
+  margin: 0;
+}
+.countContainer {
+  @include flex(row, space-evenly, center);
+  flex-wrap: wrap;
+  margin-top: 78px;
+  padding: 0 12px;
+  @include devices(desktop) {
+    padding: 0 43px;
+  }
+}
+
+.countTitleText {
+  font-family: NeueMachina;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-10;
+}
+.countTitle {
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: map-get($font-size, "l");
+  line-height: 30px;
+  color: $color-4;
+}
+
+.countSpans {
+  @include flex(row, space-between, center);
+}
+
+.countSpans span {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: map-get($font-size, "s");
+  line-height: 18px;
+  color: $color-10;
+  margin-top: 0;
+}
