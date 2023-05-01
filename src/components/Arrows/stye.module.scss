@@ -10,7 +10,6 @@
   height: 48px;
   background-color: $color-8;
   margin-right: 24px;
-
   @include devices(tablet) {
     margin-right: 24px;
   }

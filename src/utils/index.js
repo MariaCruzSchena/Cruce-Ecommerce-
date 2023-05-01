@@ -29,3 +29,8 @@ export const getList = async () => {
   const list = await getProducts("list");
   return list;
 };
+
+export const getListFiltered = async (query, type) => {  
+  const list = await getProducts("list", `${query}`, `${type}` );
+  return list;
+};

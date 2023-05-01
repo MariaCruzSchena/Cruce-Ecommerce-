@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import BackpackCard from "./BackpackCard";
 import { fakeDataHandler } from "../../../utils/fakeDataHandler";
-import jansport from "../../../assets/images/backpacks/jansport.jpg";
-import jansport2 from "../../../assets/images/backpacks/jansport2.jpg"
-import style from "./style.module.scss";
-import Pagination from "../../../components/Pagination/Pagination";
 import { carrouselPagination } from "../../../utils/pagnationHandler";
+import style from "./style.module.scss";
+import jansport from "../../../assets/images/backpacks/jansport.jpg";
+import jansport2 from "../../../assets/images/backpacks/jansport2.jpg";
+import BackpackCard from "./BackpackCard";
+import ArrowPagination from "../../../components/Pagination/ArrowPagination";
 
 const Backpacks = () => {
   const products = fakeDataHandler();
@@ -20,10 +20,10 @@ const Backpacks = () => {
         <img className={style.jansportImage2} src={jansport2} alt="jp" />
       </div>
       <div className={style.jansportBottomWrapper}>
-        {data.currentProducts.map((product) => (
-          <BackpackCard product={product} />
+        {data.currentProducts.map((product, i) => (
+          <BackpackCard product={product} key={i} />
         ))}
-        <Pagination
+        <ArrowPagination
           currentPage={currentPage}
           totalPages={data.totalPages}
           onPageChange={(page) => setCurrentPage(page)}

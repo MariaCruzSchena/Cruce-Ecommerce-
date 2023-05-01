@@ -22,7 +22,6 @@
   transform: rotate(-60deg);
 }
 
-
 //Searchbar
 .searchbarContainer {
   @include flex(row, flex-start, center);
@@ -30,7 +29,6 @@
   border-radius: 3px;
   width: 90%;
   padding: 9px;
-
   @include devices(tablet) {
     width: 90%;
   }

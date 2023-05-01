@@ -1,7 +1,7 @@
 import React from "react";
+import style from "./stye.module.scss";
 import arrowLeft from "../../assets/images/arrows/arrowLeft.svg";
 import arrowRight from "../../assets/images/arrows/arrowRight.svg";
-import style from "./stye.module.scss";
 
 const Arrows = ({ onPageChange, currentPage, totalPages }) => {
   const nextPageHandler = () => {

@@ -1,38 +1,52 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setFilter, setQuery } from "../../../state/filters";
+import style from "./style.module.scss";
 import arrowBottom from "../../../assets/images/arrows/arrowBottom.svg";
 import arrowTop2 from "../../../assets/images/arrows/arrowTop2.svg";
-import style from "./style.module.scss";
+
 const Filter = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dispatch = useDispatch();
+  const [isSorterOpen, setIsSorterOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const options = [
+    { name: "Precio asc", query: "priceASC" },
+    { name: "Precio desc", query: "priceDESC" },
+    { name: "Nombre asc", query: "nameASC" },
+    { name: "Nombre desc", query: "nameDESC" },
+  ];
 
   const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsSorterOpen(!isSorterOpen);
   };
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    setIsDropdownOpen(false);
+    setSelectedOption(option.name);
+    setIsSorterOpen(false);
+    dispatch(setFilter("sort"));
+    dispatch(setQuery(option.query));
   };
 
-  const options = ["Precio asc", "Precio desc", "Nombre asc", "Nombre desc"];
   return (
-    <div className={style.filterContainer}>
-      
-      <button className={style.filterBtn} onClick={handleDropdownToggle}>
+    <div className={style.sorterContainer}>
+      <button className={style.sorterBtn} onClick={handleDropdownToggle}>
         {selectedOption || "Ordenar por"}
       </button>
-      <img className={style.filterIcon} src={!isDropdownOpen ? arrowBottom : arrowTop2} alt="arrow" />
+      <img
+        className={style.sorterIcon}
+        src={!isSorterOpen ? arrowBottom : arrowTop2}
+        alt="arrow"
+      />
 
-      {isDropdownOpen && (
-        <ul className={style.filterMenu}>
+      {isSorterOpen && (
+        <ul className={style.sorterMenu}>
           {options.map((option) => (
             <li
-              className={style.filterOption}
-              key={option}
+              className={style.sorterOption}
+              key={option.query}
               onClick={() => handleOptionClick(option)}
             >
-              {option}
+              {option.name}
             </li>
           ))}
         </ul>

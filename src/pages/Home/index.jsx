@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import style from "./style.module.scss"
+import wa from "../../assets/images/ui/wa.svg"
 import Header from "../../layouts/Header";
 import Popup from "./Popup";
 import Sidebar from "./Sidebar";
@@ -12,6 +15,8 @@ import Countdown from "./Countdown";
 import Backpacks from "./Backpacks";
 import HalfCircleBtn from "../../components/UI/Buttons/HalfCircleBtn";
 import Footer from "../../layouts/Footer";
+
+
 const Home = () => {
   const [anchorEl, setAnchorEl] = React.useState(true);
   return (
@@ -20,6 +25,7 @@ const Home = () => {
       {anchorEl ? (
         <Popup anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
       ) : null}
+      <Link><img src={wa} alt="whatsapp" className={style.homeWA}/></Link>
       <Sidebar />
       <Grid />
       <Carrousels />
@@ -29,7 +35,7 @@ const Home = () => {
       <Backpacks />
       <Countdown />
       <Recommended />
-      <HalfCircleBtn />
+      <HalfCircleBtn id="#up" />
       <Footer />
     </div>
   );

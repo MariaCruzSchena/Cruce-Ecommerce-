@@ -1,0 +1,159 @@
+@import "../../../assets/styles/maps";
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+//Product Card
+.cardContainer {
+  @include devices(desktop) {
+    width: 360px;
+  }
+}
+
+.cardContainerRow {
+  @include devices(tablet) {
+    height: 438;
+    margin-top: 1.5rem;
+  }
+}
+
+.cardWrapperTop {
+  @include devices(desktop) {
+    @include flex(column, flex-start, center);
+    position: relative;
+    width: 360px;
+    height: 438px;
+  }
+}
+
+.productImg {
+  @include devices(tablet) {
+    width: 360px;
+    height: 438px;
+  }
+}
+
+.productDiscountIcon {
+  @include devices(desktop) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+  }
+}
+
+.productDiscount {
+  @include devices(desktop) {
+    color: $color-8;
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "x-s");
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 80px;
+    bottom: 16px;
+    transform: rotate(-15deg);
+  }
+}
+
+.cardWrapperBottom {
+  @include devices(tablet) {
+    width: 360px;
+    margin-top: 1.5rem;
+  }
+}
+
+.cardBrand {
+  @include devices(tablet) {
+    font-family: NeueMachina;
+    font-size: map-get($font-size, "m");
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 18px;
+    color: $color-2;
+  }
+}
+
+.cardTitle,
+.cardInfo,
+.cardPrice,
+.cardTotal,
+.cardDiscount {
+  @include devices(tablet) {
+    font-family: Inter;
+    font-size: map-get($font-size, "s");
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.cardInfo {
+  @include devices(tablet) {
+    color: $color-10;
+    margin-top: 12px;
+  }
+}
+
+.cardDues {
+  @include devices(tablet) {    
+    font-size: map-get($font-size, "m-l");
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.cardTotal {
+  @include devices(tablet) {
+    color: $color-7;
+    text-decoration: line-through;
+  }
+}
+
+.cardDiscount {
+  @include devices(tablet) {
+    color: $color-4;
+    font-size: map-get($font-size, "s-m");
+    font-weight: 700;
+    margin-left: 0.5rem;
+  }
+}
+
+.cardBuyButton {
+  @include devices(tablet) {
+    @include flex(row, center, center);
+    width: 60px;
+    height: 48px;
+    border: 2px solid $color-3;
+    background-color: $color-8;
+    padding: 6px 12px;
+    margin-top: 1rem;
+  }
+}
+
+.cardBuyButton img {
+  @include devices(tablet) {
+    display: inline-flex;
+    width: 26px;
+    height: 22px;
+  }
+}
+
+.cardNoStockButton {
+  @include devices(tablet) {
+    @include flex(row, center, center);
+    font-family: NeueMachina;
+    font-weight: 800;
+    font-size: map-get($font-size, "s-m");
+    line-height: 18px;
+    width: 151px;
+    height: 48px;
+    padding: 15px 18px;
+    background: $color-8;
+    border: 2px solid $color-1;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px $color-1;
+  }
+}

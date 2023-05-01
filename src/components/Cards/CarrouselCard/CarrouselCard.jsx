@@ -1,9 +1,9 @@
 import React from "react";
+import style from "./style.module.scss";
 import arrowLeft from "../../../assets/images/arrows/arrowLeft.svg";
 import arrowRight from "../../../assets/images/arrows/arrowRight.svg";
 import ShippingDetailsCard from "../ShippingDetailsCard/ShippingDetailsCard";
 import Logos from "../../Logos/Logos";
-import style from "./style.module.scss";
 
 const CarrouselCard = ({
   array,

@@ -58,8 +58,10 @@
 }
 
 .todaysToyMobile {
+  padding-top: 28px;
   @include devices(desktop) {
     display: none;
+    
   }
 }
 
@@ -67,6 +69,6 @@
   display: none;
   @include devices(desktop) {
     display: flex;
-    padding-top: 24px;
+    padding-top: 28px;
   }
 }

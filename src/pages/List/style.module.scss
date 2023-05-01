@@ -2,19 +2,99 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/variables";
 
-.listHeader{
-    @include devices(desktop){
-        display: flex;
-        flex-direction: column-reverse;
-
-    }
+.listModalClosed {
+  display: none;
 }
 
-.listDivider{
-    border-bottom: 1px solid $color-12;
-    margin: 28px 0;
-    @include devices(desktop){
-       
+.listModal {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
 
+  img.cross {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    z-index: 2;
+    top: 52vh;
+    left: 83vw;
+    color: $color-1;
+    @include devices(tablet) {
+        top: 45vh;
+        left: 63vw;
     }
+  }
+  img.modal {
+    position: absolute;
+    z-index: 2;
+    top: 50vh;
+    left: 10vw;
+    width: 80%;
+    height: auto;
+    @include devices(tablet) {
+      top: 40vh;
+      left: 35vw;
+      width: 30%;
+    }
+  }
+  p {
+    position: absolute;
+    z-index: 2;
+    top: 56vh;
+    left: 25%;
+    width: 50%;
+    height: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    @include devices(tablet) {
+      top: 49vh;
+      left: 35vw;
+      width: 30%;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+.listHeader {
+  @include devices(desktop) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.listDivider {
+  border-bottom: 1px solid $color-12;
+  margin: 28px 0;
+  @include devices(desktop) {
+  }
+}
+
+.listMobile {
+  @include devices(desktop) {
+    display: none;
+  }
+}
+
+.listDesktop {
+  display: none;
+  @include devices(desktop) {
+    @include flex(column, space-evenly, center);
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 48px;
+  }
+}
+
+.listProducts {
+  @include devices(desktop) {
+    @include flex(row, space-evenly, center);
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 48px;
+  }
 }

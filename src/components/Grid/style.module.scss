@@ -55,7 +55,6 @@
 
 .newBottomWrapperDesktop {
   display: none;
-
   @include devices(desktop) {
     @include flex(column, center, center);
     width: 100%;

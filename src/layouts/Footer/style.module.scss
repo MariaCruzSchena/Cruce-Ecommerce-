@@ -101,6 +101,7 @@
     width: 66%;
   }
 }
+
 .footerSocials {
   width: 40%;
   @include flex(column, center, flex-end);
@@ -109,6 +110,7 @@
     width: 33%;
   }
 }
+
 .footerLinks {
   width: 40%;
   height: 100%;

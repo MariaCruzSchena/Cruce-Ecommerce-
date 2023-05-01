@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./style.module.scss"
 import { Link } from "react-router-dom";
+import style from "./style.module.scss";
 import FooterSocials from "../../components/UI/Divs/FooterSocials";
 import FooterImages from "../../components/UI/Divs/FooterImages";
 
@@ -14,19 +14,28 @@ const Footer = () => {
         </div>
         <div className={style.footerContactRight}>
           <p className={style.footerInputTitle}>¿Buscas ofertas?</p>
-          <input className={style.footerInput} type="email" placeholder="Email" />
+          <input
+            className={style.footerInput}
+            type="email"
+            placeholder="Email"
+          />
           <button className={style.footerInputBtn}>Enviar</button>
         </div>
       </div>
       <div className={style.footerContentWrapper}>
         <div className={style.footerSocials}>
           <FooterSocials />
-          
         </div>
         <div className={style.footerLinks}>
-          <Link><p>Preguntas frec.</p></Link>
-          <Link><p>Térm y cond.</p></Link>
-          <Link><p>Mis pedidos</p></Link>
+          <Link>
+            <p>Preguntas frec.</p>
+          </Link>
+          <Link>
+            <p>Térm y cond.</p>
+          </Link>
+          <Link>
+            <p>Mis pedidos</p>
+          </Link>
         </div>
       </div>
       <FooterImages />

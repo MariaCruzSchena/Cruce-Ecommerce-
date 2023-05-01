@@ -13,7 +13,6 @@
   background-color: $color-2;
   height: 30px;
   padding: 10px;
-
   @include devices(desktop) {
     padding: 10px 20px;
   }
@@ -39,7 +38,6 @@
 
 .popupMsgDesktop {
   display: none;
-
   @include devices(desktop) {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,12 +52,12 @@
 .popupBtn {
   width: 20px;
   height: 20px;
-  background-color: $color-2; 
+  background-color: $color-2;
   border: none;
   cursor: pointer;
 }
 
-button .cross{
+button .cross {
   display: inline-block;
   width: 10px;
   height: 10px;

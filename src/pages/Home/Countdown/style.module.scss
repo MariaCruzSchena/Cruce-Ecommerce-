@@ -5,6 +5,7 @@
 * {
   margin: 0;
 }
+
 .countContainer {
   @include flex(row, space-evenly, center);
   flex-wrap: wrap;
@@ -23,6 +24,7 @@
   line-height: 18px;
   color: $color-10;
 }
+
 .countTitle {
   font-family: NeueMachina;
   font-weight: 800;

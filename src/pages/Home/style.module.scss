@@ -1,0 +1,14 @@
+@import "../../assets/styles/maps";
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.homeWA{
+    width:60px;
+    height: 60px;
+    position: absolute;
+    right: 5%;
+    top: 80%;
+    @include devices(desktop){
+        top: 150%;
+    }
+}

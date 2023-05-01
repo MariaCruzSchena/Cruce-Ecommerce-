@@ -3,11 +3,9 @@
 @import "../../../assets/styles/variables";
 
 .filtersContainer{
-    @include flex (column, space-evenly, center);
-    height: 25vh;
+    @include flex (column, space-evenly, center); 
     @include devices(desktop){
         padding: 0 48px; 
-        @include flex (row, space-between, center);
-        height: 10vh;
+        @include flex (row, space-between, center);     
     }
 }

@@ -1,18 +1,13 @@
 import React from "react";
-import Arrows from "../Arrows/Arrows";
 import style from "./style.module.scss";
-const Pagination = ({
+import Arrows from "../Arrows/Arrows";
+
+const ArrowPagination = ({
   currentPage,
   totalPages,
   onPageChange,
   reverse = false,
 }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
-
   return (
     <div
       className={!reverse ? style.pagContainerRow : style.pagContainerReverse}
@@ -31,4 +26,4 @@ const Pagination = ({
   );
 };
 
-export default Pagination;
+export default ArrowPagination;

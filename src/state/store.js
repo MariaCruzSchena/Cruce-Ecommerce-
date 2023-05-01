@@ -6,6 +6,7 @@ import mostSearchedProductReducer from "./mostSearched";
 import newProductsReducer from "./new";
 import recommendedProductsReducer from "./recommended";
 import listReducer from "./list"
+import filtersReducer from "./filters"
 
 const store = configureStore({
   reducer: {
@@ -14,7 +15,8 @@ const store = configureStore({
     mostSearched: mostSearchedProductReducer,
     new: newProductsReducer,
     recommended: recommendedProductsReducer,
-    list: listReducer
+    list: listReducer,
+    filters: filtersReducer
     
   },
 });

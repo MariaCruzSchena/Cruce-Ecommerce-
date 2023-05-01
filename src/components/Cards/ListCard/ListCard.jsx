@@ -3,10 +3,10 @@ import style from "./style.module.scss";
 import greenCart from "../../../assets/images/ui/greenCart.svg";
 import discount from "../../../assets/images/ui/discount.svg";
 
-const ProductCard = ({ product, column = true }) => {
+const ProductCard = ({ product }) => {
   return (
     product?.brand && (
-      <div className={column ? style.cardContainer : style.cardContainerRow}>
+      <div className={style.cardContainer}>
         <div className={style.cardWrapperTop}>
           <img
             className={style.productImg}
@@ -24,11 +24,7 @@ const ProductCard = ({ product, column = true }) => {
             </>
           )}
         </div>
-        <div
-          className={
-            column ? style.cardWrapperBottom : style.cardWrapperBottomRow
-          }
-        >
+        <div className={style.cardWrapperBottom}>
           <p className={style.cardBrand}>{product.brand}</p>
           <p className={style.cardTitle}>{product.title}</p>
           <p className={style.cardInfo}>6 Cuotas s/interés de</p>

@@ -1,10 +1,10 @@
 import React from "react";
-import ProductCard from "../Cards/ProductCard/ProductCard";
-import Pagination from "../Pagination/Pagination";
 import { newPagination } from "../../utils/pagnationHandler";
-import style from "./style.module.scss"
+import style from "./style.module.scss";
+import ProductCard from "../Cards/ProductCard/ProductCard";
+import ArrowPagination from "../Pagination/ArrowPagination";
 
-const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
+const SmallGrid = ({ products, currentPage, setCurrentPage, title }) => {
   const mobileData = newPagination(products, "mobile", currentPage);
   const desktopData = newPagination(products, "desktop", currentPage);
 
@@ -20,7 +20,7 @@ const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
             <ProductCard key={i} product={product} />
           ))}
         </div>
-        <Pagination
+        <ArrowPagination
           currentPage={currentPage}
           totalPages={mobileData.totalPages}
           onPageChange={(page) => setCurrentPage(page)}
@@ -29,14 +29,14 @@ const SmallGrid = ({products, currentPage, setCurrentPage, title}) => {
 
       <div className={style.newBottomWrapperDesktop}>
         <div className={style.newInnerWrapper}>
-          {desktopData.currentProducts.map((product) => (
-            <ProductCard product={product} />
+          {desktopData.currentProducts.map((product, i) => (
+            <ProductCard product={product} key={i} />
           ))}
         </div>
-        <Pagination
+        <ArrowPagination
           currentPage={currentPage}
           totalPages={desktopData.totalPages}
-          onPageChange={(page) => setCurrentPage(page)}          
+          onPageChange={(page) => setCurrentPage(page)}
         />
       </div>
     </div>

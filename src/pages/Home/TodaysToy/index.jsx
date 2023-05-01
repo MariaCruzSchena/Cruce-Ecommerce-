@@ -1,7 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import style from "./style.module.scss";
 import ProductCard from "../../../components/Cards/ProductCard/ProductCard";
-import { useSelector } from "react-redux";
 
 const TodaysToy = () => {
   const toy = useSelector((state) => state.favorite);
@@ -17,7 +17,7 @@ const TodaysToy = () => {
           width="651"
           height="366"
           src="https://www.youtube.com/embed/9GJZZNM1eF4"
-          title="Game of Thrones | The Great Funko Pop! War Is Here"          
+          title="Game of Thrones | The Great Funko Pop! War Is Here"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />

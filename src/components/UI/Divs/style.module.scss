@@ -5,9 +5,9 @@
 //FooterSocials
 .socials {
   @include flex(row, flex-end, center);
-  @include devices(desktop){
+  @include devices(desktop) {
     @include flex(row-reverse, flex-end, center);
-    width: 50%
+    width: 50%;
   }
 
   img {
@@ -24,10 +24,10 @@
     text-transform: uppercase;
     color: $color-7;
     margin-right: 1rem;
-      @include devices(desktop){
-        margin-left: 1rem;
-        text-align: left
-  }
+    @include devices(desktop) {
+      margin-left: 1rem;
+      text-align: left;
+    }
   }
 }
 
@@ -36,7 +36,7 @@
   @include flex(column, space-evenly, center);
   width: 100%;
   margin-top: 1rem;
-  @include devices(desktop){
+  @include devices(desktop) {
     display: none;
   }
 }

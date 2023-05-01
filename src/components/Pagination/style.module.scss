@@ -2,19 +2,60 @@
 @import "../../assets/styles/mixins";
 @import "../../assets/styles/variables";
 
-.pagContainerRow{
-    width: 100%;
-    @include flex(row, space-between, center);
-    margin-top: 24px;
+//Arrow pagination
+.pagContainerRow {
+  width: 100%;
+  @include flex(row, space-between, center);
+  margin-top: 24px;
 }
 
-.pagContainerReverse{
-    width: 100%;
-    @include flex(row-reverse, space-between, center)
+.pagContainerReverse {
+  width: 100%;
+  @include flex(row-reverse, space-between, center);
 }
 
-.newArrowContainer{
-    display: inline-block;
-    max-width: auto;
-    @include flex(row, flex-start, center)
+.newArrowContainer {
+  display: inline-block;
+  max-width: auto;
+  @include flex(row, flex-start, center);
+}
+
+//Number pagination
+.nPaginationContainer {
+  @include flex(row, center, center);
+}
+
+.nPaginationWrapper {
+  display: inline-block;
+  background-color: $color-8;
+  border: none;
+  outline: none;
+  width: 36px;
+  height: 36px;
+  padding: 12px;
+  @include flex(row, center, center);
+}
+
+.nPaginationNumber,
+.nPaginationNumberDiff {
+  @include flex(row, center, center);
+  background-color: $color-8;
+  border: none;
+  outline: none;
+  width: 36px;
+  height: 36px;
+  padding: 12px;
+  font-family: NeueMachina;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: $color-7;
+  margin: 6px;
+}
+
+.nPaginationNumberDiff {
+  border: 3px solid $color-5;
+  border-radius: 10px;
+  margin: 8px;
 }

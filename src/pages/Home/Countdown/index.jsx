@@ -39,8 +39,8 @@ const Countdown = () => {
             </div>
           </div>
 
-          {products.map((product) => (
-            <SmallProductCard product={product} />
+          {products.map((product, i) => (
+            <SmallProductCard product={product} key={i}/>
           ))}
         </div>
       )}

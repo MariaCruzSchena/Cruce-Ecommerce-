@@ -30,8 +30,7 @@ img {
 }
 
 .detailCardSubtitle,
-.detailCardSubtitleDiff {
-  font-family: Inter;
+.detailCardSubtitleDiff {  
   font-size: map-get($font-size, "x-s");
   font-weight: 700;
   letter-spacing: 0.05em;

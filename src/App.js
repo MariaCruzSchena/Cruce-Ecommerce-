@@ -9,6 +9,7 @@ import {
   getNew,
   getRecommended,
   getList,
+  getListFiltered,
 } from "./utils";
 import { setProducts } from "./state/products";
 import { setFavorite } from "./state/favorite";
@@ -16,10 +17,12 @@ import { setMostSearched } from "./state/mostSearched";
 import { setNew } from "./state/new";
 import { setRecommended } from "./state/recommended";
 import { setList } from "./state/list";
-import { useDispatch } from "react-redux";
+import { setArray } from "./state/filters";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
+  const filters = useSelector((state) => state.filters);
 
   useEffect(() => {
     getAllProducts().then((res) => dispatch(setProducts(res)));
@@ -30,6 +33,13 @@ function App() {
     getList().then((res) => dispatch(setList(res.data.items)));
   }, [dispatch]);
 
+  useEffect(() => {
+    !filters.query && !filters.filter
+      ? getList().then((res) => dispatch(setArray(res.data.items)))
+      : getListFiltered(filters.query, filters.filter).then((res) =>
+          dispatch(setArray(res.data.items))
+        );
+  }, [filters.query, filters.filter, dispatch]);
   return (
     <>
       <div className="App"></div>

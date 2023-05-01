@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./style.module.scss";
-import ShippingDetailsCard from "../../../components/Cards/ShippingDetailsCard/ShippingDetailsCard";
 import BrandsCarrousel from "./BrandsCarrousel";
 import ShippingCarrousel from "./ShippingCarrousel";
 

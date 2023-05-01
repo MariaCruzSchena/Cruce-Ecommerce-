@@ -2,23 +2,18 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/variables";
 
-@import "../../../assets/styles/maps";
-@import "../../../assets/styles/mixins";
-@import "../../../assets/styles/variables";
-
 .jansportContainer {
   position: relative;
   margin-top: 36px;
   @include devices(desktop) {
     @include flex(row, space-evenly, flex-start);
-    //height: 100vh;
   }
 }
 .jansportImages {
-    @include devices(desktop) {
-      width: 65%;
-    }
+  @include devices(desktop) {
+    width: 65%;
   }
+}
 
 .jansportImage {
   @include devices(desktop) {
@@ -61,9 +56,6 @@
 .jansportBottomWrapper {
   @include flex(column, space-between, flex-start);
   padding: 0 0 0 12px;
-  @include devices(desktop) {
-   // width: 25%;
-  }
 }
 
 //Product Card
@@ -98,15 +90,9 @@
   height: 240px;
 }
 
-
 .cardWrapperBottom {
   width: 210px;
   margin-top: 1rem;
-
-  @include devices(tablet) {
-    width: 210px;
-    margin-top: 1rem;
-  }
 }
 
 .cardBrand {
@@ -116,14 +102,8 @@
   letter-spacing: 0.05em;
   line-height: 18px;
   color: $color-2;
-
   @include devices(tablet) {
-    font-family: NeueMachina;
     font-size: map-get($font-size, "m");
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    line-height: 18px;
-    color: $color-2;
   }
 }
 
@@ -136,12 +116,8 @@
   font-size: map-get($font-size, "s-m");
   font-weight: 400;
   line-height: 18px;
-
   @include devices(tablet) {
-    font-family: Inter;
     font-size: map-get($font-size, "s");
-    font-weight: 400;
-    line-height: 18px;
   }
 }
 
@@ -149,7 +125,6 @@
   color: $color-10;
   margin-top: 5px;
   @include devices(tablet) {
-    color: $color-10;
     margin-top: 12px;
   }
 }
@@ -161,21 +136,13 @@
   line-height: 24px;
 
   @include devices(tablet) {
-    font-family: Inter;
     font-size: map-get($font-size, "m-l");
-    font-weight: 700;
-    line-height: 24px;
   }
 }
 
 .cardTotal {
   color: $color-7;
   text-decoration: line-through;
-
-  @include devices(tablet) {
-    color: $color-7;
-    text-decoration: line-through;
-  }
 }
 
 .cardDiscount {
@@ -186,15 +153,11 @@
 
   @include devices(tablet) {
     color: $color-4;
-    font-size: map-get($font-size, "s-m");
-    font-weight: 700;
-    margin-left: 0.5rem;
   }
 }
 
 .cardBuyButton {
   display: none;
-
   @include devices(tablet) {
     @include flex(row, center, center);
     width: 60px;
@@ -208,7 +171,6 @@
 
 .cardBuyButton img {
   display: none;
-
   @include devices(tablet) {
     display: inline-flex;
     width: 26px;
@@ -218,7 +180,6 @@
 
 .cardNoStockButton {
   display: none;
-
   @include devices(tablet) {
     @include flex(row, center, center);
     font-family: NeueMachina;

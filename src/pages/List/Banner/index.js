@@ -1,6 +1,6 @@
 import React from "react";
+import style from "./style.module.scss";
 import banner from "../../../assets/images/ui/banner_listado.jpg";
-import style from "./style.module.scss"
 
 const Banner = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
+import styles from "./style.module.scss";
 import cruceLogo from "../../assets/images/cruceLogo.jpg";
 import magnifyingGlass from "../../assets/images/navbar/magnifyingGlass.svg";
 import cart from "../../assets/images/navbar/cart.svg";

@@ -70,19 +70,22 @@
 .filterMenu {
   width: 80%;
   position: absolute;
-  top: 5%;
-  left: 0%;
+  top: 14.5%;
+  left: 10%;
   z-index: 1;
   padding: 0;
   margin: 5px 0 0;
   list-style: none;
   background-color: $color-8;
   border: 1px solid $color-9;
+  border-radius: 6px;
   @include devices(tablet) {
     width: 60%;
   }
   @include devices(desktop) {
-    display: none;
+    width: 20%;
+    top:53.3%;
+    left: 43%;
   }
 }
 

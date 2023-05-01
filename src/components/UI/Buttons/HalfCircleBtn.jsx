@@ -2,9 +2,10 @@ import React from "react";
 import style from "./style.module.scss";
 import arrowTop from "../../../assets/images/arrows/arrowTop.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-const HalfCircleBtn = () => {
+
+const HalfCircleBtn = ({id}) => {
   return (
-    <AnchorLink href="#up">
+    <AnchorLink href={id}>
       {" "}
       <div className={style.divBtn}>
         <img src={arrowTop} />

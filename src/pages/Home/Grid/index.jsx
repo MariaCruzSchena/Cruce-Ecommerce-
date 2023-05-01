@@ -1,10 +1,10 @@
 import React from "react";
-import style from "./style.module.scss";
 import { useSelector } from "react-redux";
-import ProductCard from "../../../components/Cards/ProductCard/ProductCard"
+import style from "./style.module.scss";
+import ProductCard from "../../../components/Cards/ProductCard/ProductCard";
 
 const Grid = () => {
-  const products = useSelector((state) => state.products);  
+  const products = useSelector((state) => state.products);
   return (
     <div className={style.divMain}>
       <div className={style.div1}>

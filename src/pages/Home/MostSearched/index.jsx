@@ -11,8 +11,8 @@ const MostSearched = () => {
       <p className={style.mostSearchedTitle}>
         Lo más <br /> buscado
       </p>
-      {products.map((product) => (
-        <SmallProductCard product={product} />
+      {products.map((product, i) => (
+        <SmallProductCard product={product} key={i}/>
       ))}
     </div>
   );
