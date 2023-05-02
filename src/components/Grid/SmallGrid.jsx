@@ -26,7 +26,6 @@ const SmallGrid = ({ products, currentPage, setCurrentPage, title }) => {
           onPageChange={(page) => setCurrentPage(page)}
         />
       </div>
-
       <div className={style.newBottomWrapperDesktop}>
         <div className={style.newInnerWrapper}>
           {desktopData.currentProducts.map((product, i) => (

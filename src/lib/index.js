@@ -23,7 +23,7 @@ const getProducts = async (route, query = null, type = null) => {
     if (!products) return "Couldn't find products";
     return products;
   } catch (error) {
-    console.log(`Couldn't fetch products. Error: ${error}`, error);
+    console.log(`Couldn't fetch products. Error: ${error}`);
   }
 };
 
