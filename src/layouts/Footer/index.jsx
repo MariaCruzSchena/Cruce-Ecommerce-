@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./style.module.scss";
-import FooterSocials from "../../components/UI/Divs/FooterSocials";
-import FooterImages from "../../components/UI/Divs/FooterImages";
+import FooterSocials from "./FooterSocials";
+import FooterImages from "./FooterImages";
 
 const Footer = () => {
   return (

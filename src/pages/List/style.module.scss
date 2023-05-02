@@ -21,8 +21,8 @@
     left: 83vw;
     color: $color-1;
     @include devices(tablet) {
-        top: 45vh;
-        left: 63vw;
+      top: 45vh;
+      left: 63vw;
     }
   }
   img.modal {
@@ -60,6 +60,7 @@
     }
   }
 }
+
 .listHeader {
   @include devices(desktop) {
     display: flex;
@@ -71,6 +72,7 @@
   border-bottom: 1px solid $color-12;
   margin: 28px 0;
   @include devices(desktop) {
+    display: none;
   }
 }
 

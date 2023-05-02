@@ -10,7 +10,7 @@ import {
   getRecommended,
   getList,
   getListFiltered,
-} from "./utils";
+} from "./services";
 import { setProducts } from "./state/products";
 import { setFavorite } from "./state/favorite";
 import { setMostSearched } from "./state/mostSearched";

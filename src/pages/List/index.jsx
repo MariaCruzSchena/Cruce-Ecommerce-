@@ -7,7 +7,7 @@ import cross from "../../assets/images/ui/cross.svg";
 import Banner from "./Banner";
 import Filters from "./Filters";
 import ProductCard from "../../components/Cards/ProductCard/ProductCard";
-import ListCard from "../.././components/Cards/ListCard/ListCard";
+import ListCard from "./Card/ListCard";
 import NumberPagination from "../../components/Pagination/NumberPagination";
 import HalfCircleBtn from "../../components/UI/Buttons/HalfCircleBtn";
 

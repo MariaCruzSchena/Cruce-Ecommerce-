@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { fakeDataHandler } from "../../../utils/fakeDataHandler";
 import { carrouselPagination } from "../../../utils/pagnationHandler";
 import style from "./style.module.scss";
-import jansport from "../../../assets/images/backpacks/jansport.jpg";
-import jansport2 from "../../../assets/images/backpacks/jansport2.jpg";
+import jansport from "../../../assets/images/backpacks/jansport.svg";
+import jansport2 from "../../../assets/images/backpacks/jansport2.svg";
 import BackpackCard from "./BackpackCard";
 import ArrowPagination from "../../../components/Pagination/ArrowPagination";
 
