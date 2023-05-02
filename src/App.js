@@ -40,6 +40,7 @@ function App() {
           dispatch(setArray(res.data.items))
         );
   }, [filters.query, filters.filter, dispatch]);
+  
   return (
     <>
       <div className="App"></div>

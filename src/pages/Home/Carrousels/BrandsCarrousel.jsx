@@ -47,7 +47,6 @@ const BrandsCarrousel = () => {
             totalPages={desktopData.totalPages}
           />
         </div>
-
         <div className={style.sliderDesktop}>
           {desktopData.currentProducts.map((element, i) => (
             <Logos brand={element} key={i} />
